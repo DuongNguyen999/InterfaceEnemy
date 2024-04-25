@@ -14,7 +14,11 @@
 public interface IDamager
 {
     void Efect();
+}
 
+public interface Isource
+{
+    void Efect();
 }
 public class Wood : IDamager
 {
@@ -40,3 +44,14 @@ public class Grass : IDamager
 
     }
 }
+ public class Water : IDamager, Isource
+ {
+    void Isource.Efect()
+    {
+        
+    }
+    void IDamager.Efect()
+    {
+
+    }
+ }
